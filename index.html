@@ -1,60 +1,39 @@
-<!DOCTYPE html>
-<html>
+<html id="html", style="color: rgb(34,34,34);  background: rgb(208,208,208);">
 <head>
-<title>Unity Assets</title>
 <style>
-html {
-  color: rgb(238, 238, 238);
-  background-color: rgb(34, 34, 34);
+.RightAlign {
+	text-align: right;
 }
-h1 {
-  text-align: center;
-  font-size: 50px;
-}
-.button {
-background-color: rgb(0, 0, 0);
-color: rgb(255, 255, 255);
-font-size: 16px;
-padding: 10px 20px;
-border-radius: 10px;
-border: 0px;
+.CenterAlign {
+	text-align: center;
 }
 </style>
 </head>
 <body>
-
+<div class="RightAlign">
+<input type="button" name="Change From Dark / Light" value="Dark Mode" id="colorToggle" onclick="colorchange('colorToggle', 'html');" style="text-align: right;  background: rgb(255,255,255);  color: rgb(0,0,0);  font-size: 16px;  padding: 10px 20px;  border-radius: 10px;  border: 0px;  text-align: center;"/>
+</div>
+<div class="CenterAlign">
+<h1>Unity Assets: <a href='https://github.com/TrentonGage11/UnityAssets'>Here</a>!</h1>
+</div>
 <script>
-function colorChange() {
-var button = document.getElementById('button1').style.backgroundColor;
-var color = '';
-
-if (button != 'rgb(255, 255, 255)') {
-    backgroundColor = 'rgb(255, 255, 255)';
-    color = 'rgb(0, 0, 0)';
-    colorBackgroundHTML = 'rgb(34, 34, 34)';
-    colorForegroundHTML = 'rgb(238, 238, 238)';
-    document.getElementById('button1').style.color = color;
-    document.getElementById('button1').style.backgroundColor = backgroundColor;
-    document.getElementById('html').style.backgroundColor = colorBackgroundHTML;
-    document.getElementById('html').style.color = colorForegroundHTML;
-
-
-    }
-else if (button == 'rgb(0, 0, 0)') {
-    color = 'rgb(255, 255, 255)';
-    backgroundColor = 'rgb(0, 0, 0)';
-    colorBackgroundHTML = 'rgb(238, 238, 238)';
-    colorForegroundHTML = 'rgb(34, 34, 34)';
-    document.getElementById('button1').style.color = color;
-    document.getElementById('button1').style.backgroundColor = backgroundColor;
-    document.getElementById('html').style.backgroundColor = colorBackgroundHTML;
-    document.getElementById('html').style.color = colorForegroundHTML;
-
-    }
+function colorchange(id0, id1) {
+  var background = document.getElementById(id0).style.backgroundColor;
+  if(background == "rgb(255, 255, 255)") {
+	document.getElementById(id0).style.backgroundColor = "rgb(0,0,0)";
+	document.getElementById(id0).style.color = "rgb(255,255,255)";
+	document.getElementById(id0).value = 'Light Mode'
+	document.getElementById(id1).style.backgroundColor = "rgb(34,34,34)";
+	document.getElementById(id1).style.color = "rgb(238,238,238)";
+  }
+  if(background == "rgb(0, 0, 0)") {
+    document.getElementById(id0).style.backgroundColor = "rgb(255,255,255)";
+	document.getElementById(id0).style.color = "rgb(0,0,0)";
+	document.getElementById(id0).value = 'Dark Mode'
+	document.getElementById(id1).style.backgroundColor = "rgb(208,208,208)";
+	document.getElementById(id1).style.color = "rgb(34,34,34)";
+  }
 }
 </script>
-
-<input type="button" id="button1" class="button" onclick="colorChange()" value="Toggle Dark/Light" />
-<h1>Unity Assets: <a href='https://github.com/TrentonGage11/UnityAssets'>Here</a>!</h1>
 </body>
 </html>
