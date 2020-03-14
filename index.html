@@ -28,8 +28,8 @@ function colorChange() {
 var button = document.getElementById('button1').style.backgroundColor;
 var color = '';
 
-if (button !== '#ffffff') {
-    color = '#ffffff';
+if (button !== 'rgb(255,255,255)') {
+    color = 'rgb(255,255,255)';
     colorBackgroundHTML = '#222222';
     colorForegroundHTML = '#eeeeee';
     document.getElementById('button1').style.backgroundColor = color;
@@ -38,8 +38,8 @@ if (button !== '#ffffff') {
 
 
     }
-else if (button === '#000000') {
-    color = '#000000';
+else if (button === 'rgb(0,0,0)') {
+    color = 'rgb(0,0,0)';
     colorBackgroundHTML = '#eeeeee';
     colorForegroundHTML = '#222222';
     document.getElementById('button1').style.backgroundColor = color;
