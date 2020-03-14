@@ -4,16 +4,16 @@
 <title>Unity Assets</title>
 <style>
 html {
-  color: #eeeeee;
-  background-color: #222222;
+  color: rgb(238,238,238);
+  background-color: rgb(34,34,34);
 }
 h1 {
   text-align: center;
   font-size: 50px;
 }
 .button {
-background-color: #909090;
-color: #d3d3d3;
+background-color: rgb(0,0,0);
+color: rgb(238,238,238);
 font-size: 16px;
 padding: 10px 20px;
 border-radius: 10px;
@@ -29,20 +29,24 @@ var button = document.getElementById('button1').style.backgroundColor;
 var color = '';
 
 if (button !== 'rgb(255,255,255)') {
-    color = 'rgb(255,255,255)';
-    colorBackgroundHTML = '#222222';
-    colorForegroundHTML = '#eeeeee';
-    document.getElementById('button1').style.backgroundColor = color;
+    backgroundColor = 'rgb(255,255,255)';
+    color = 'rgb(0,0,0)';
+    colorBackgroundHTML = 'rgb(34,34,34)';
+    colorForegroundHTML = 'rgb(238,238,238)';
+    document.getElementById('button1').style.color = color;
+    document.getElementById('button1').style.backgroundColor = backgroundColor;
     document.getElementById('html').style.backgroundColor = colorBackgroundHTML;
     document.getElementById('html').style.color = colorForegroundHTML;
 
 
     }
 else if (button === 'rgb(0,0,0)') {
-    color = 'rgb(0,0,0)';
-    colorBackgroundHTML = '#eeeeee';
-    colorForegroundHTML = '#222222';
-    document.getElementById('button1').style.backgroundColor = color;
+    color = 'rgb(238,238,238)';
+    backgroundColor = 'rgb(0,0,0)';
+    colorBackgroundHTML = 'rgb(238,238,238)';
+    colorForegroundHTML = 'rgb(34,34,34)';
+    document.getElementById('button1').style.color = color;
+    document.getElementById('button1').style.backgroundColor = backgroundColor;
     document.getElementById('html').style.backgroundColor = colorBackgroundHTML;
     document.getElementById('html').style.color = colorForegroundHTML;
 
