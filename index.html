@@ -11,9 +11,33 @@ h1 {
   text-align: center;
   font-size: 50px;
 }
+.button {
+background-color: #909090;
+color: #d3d3d3;
+font-size: 16px;
+padding: 10px 20px;
+border-radius: 10px;
+border: 0px;
+}
 </style>
 </head>
 <body>
+function colorChange() {
+var button = document.getElementById('button1').style.backgroundColor;
+var color = '';
+
+if (button !== 'green') {
+    color = 'green';
+    document.getElementById('button1').style.backgroundColor = color;       
+
+    }
+else if (button === 'green') {
+    color = 'red';
+    document.getElementById('button1').style.backgroundColor = color; 
+
+    }
+}
+<input type="button" id="button1" class="button" onclick="colorChange()" value="Toggle Dark/Light" />
 <h1>Unity Assets: <a href='https://github.com/TrentonGage11/UnityAssets'>Here</a>!</h1>
 </body>
 </html>
