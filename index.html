@@ -28,14 +28,23 @@ function colorChange() {
 var button = document.getElementById('button1').style.backgroundColor;
 var color = '';
 
-if (button !== 'green') {
-    color = 'green';
-    document.getElementById('button1').style.backgroundColor = color;       
+if (button !== '#ffffff') {
+    color = '#ffffff';
+    colorBackgroundHTML = '#222222';
+    colorForegroundHTML = '#eeeeee';
+    document.getElementById('button1').style.backgroundColor = color;
+    document.getElementById('html').style.backgroundColor = colorBackgroundHTML;
+    document.getElementById('html').style.Color = colorForegroundHTML;
+
 
     }
-else if (button === 'green') {
-    color = 'red';
-    document.getElementById('button1').style.backgroundColor = color; 
+else if (button === '#000000') {
+    color = '#000000';
+    colorBackgroundHTML = '#eeeeee';
+    colorForegroundHTML = '#222222';
+    document.getElementById('button1').style.backgroundColor = color;
+    document.getElementById('html').style.backgroundColor = colorBackgroundHTML;
+    document.getElementById('html').style.Color = colorForegroundHTML;
 
     }
 }
